@@ -1,0 +1,17 @@
+<%= current_user.name %>
+<h1>Courses you're enrolled in</h1>
+
+<ul>
+  <% @grades.each do |grade| %>
+  <li>
+    <h4><%= grade.course.name %></h4>
+    <p>Academic Grade: <%= grade.academic %> </p>
+    <p>Communication Grade: <%= grade.communication %> </p>
+    <p>Team Grade: <%= grade.team_work %> </p>
+
+  </li>
+
+  <% end %>
+</ul>
+
+
