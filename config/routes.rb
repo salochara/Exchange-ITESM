@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root to: 'users#index'
 
-  resources :users, only: [:index]
 
   devise_for :teachers, path: 'teachers', controllers: {
     sessions: 'teachers/sessions',
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
     passwords: 'teachers/passwords',
     registrations: 'teachers/registrations',
     unlocks: 'teachers/unlocks',
+    teachers: 'teachers'
   }
 
   devise_for :users, path: 'users', controllers: {
@@ -19,10 +21,13 @@ Rails.application.routes.draw do
     omniauthCallbacks: 'users/omniauth_callbacks',
     passwords: 'users/passwords',
     registrations: 'users/registrations',
-    unlocks: 'users/unlocks'
+    unlocks: 'users/unlocks',
+    users: 'users'
   }
 
-  # resources :teachers, only: [:index]
+  resources :users, only: [:index, :show]
+
+  #resources :teachers, only: [:index]
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

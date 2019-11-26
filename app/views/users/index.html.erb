@@ -1,5 +1,6 @@
 <%= current_user.name %>
 <h1>Courses you're enrolled in</h1>
+<% flash[:notice] = "New grade!" %>
 
 <ul>
   <% @grades.each do |grade| %>
