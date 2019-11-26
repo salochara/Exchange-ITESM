@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
 
-
   devise_for :teachers, path: 'teachers', controllers: {
     sessions: 'teachers/sessions',
     confirmations: 'teachers/confirmations',
