@@ -1,3 +1,4 @@
+=begin
 module Accessible
   extend ActiveSupport::Concern
   included do
@@ -17,3 +18,4 @@ module Accessible
     end
   end
 end
+=end
