@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class Teachers::SessionsController < Devise::SessionsController
-    include Accessible
+    #include Accessible
 
   # before_action :configure_sign_in_params, only: [:create]
-  skip_before_action :check_user, only: :destroy
+ # skip_before_action :check_user, only: :destroy
 
   # GET /resource/sign_in
   # def new

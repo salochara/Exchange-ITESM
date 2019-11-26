@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Teachers::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-    include Accessible
+    #include Accessible
 
 
   # You should configure your model like this:

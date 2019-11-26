@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Teachers::UnlocksController < Devise::UnlocksController
-    include Accessible
+    #include Accessible
 
   # GET /resource/unlock/new
   # def new
