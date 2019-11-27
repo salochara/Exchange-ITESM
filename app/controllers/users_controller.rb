@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  require 'csv'
   def index
     @grades = current_user.grades.order('updated_at DESC')
   end
@@ -9,6 +10,6 @@ class UsersController < ApplicationController
 
   def import
     User.import(params[:file])
-    redirect_to root_path
+    redirect_to root_url
   end
 end
