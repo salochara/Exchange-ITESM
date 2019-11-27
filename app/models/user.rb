@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  require 'csv'
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,6 +11,7 @@ class User < ApplicationRecord
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
+      #raise
       Grade.create!(row.to_hash)
     end
   end
