@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     omniauthCallbacks: 'teachers/omniauth_callbacks',
     passwords: 'teachers/passwords',
     registrations: 'teachers/registrations',
-    unlocks: 'teachers/unlocks',
+    unlocks: 'teachers/upnlocks',
     teachers: 'teachers'
   }
 
@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   resources :teachers, only: [:index]
+  post 'csv_import', to: 'users#import'
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'faker'
 gem 'rails_admin'
+gem 'csv'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

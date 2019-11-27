@@ -7,4 +7,10 @@ class User < ApplicationRecord
   belongs_to :teacher
   has_many :grades
   has_many :courses, through: :grades
+
+  def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row|
+      Grade.create!(row.to_hash)
+    end
+  end
 end

@@ -1,7 +1,13 @@
 <%= current_user.name %>
+
+<h4>Import the data</h4>
+<%= form_tag csv_import_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import CSV" %>
+<% end %>
+
 <h1>Courses you're enrolled in</h1>
 <% flash[:notice] = "New grade!" %>
-
 <ul>
   <% @grades.each do |grade| %>
   <li>
@@ -14,5 +20,7 @@
 
   <% end %>
 </ul>
+
+
 
 
