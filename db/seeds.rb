@@ -19,6 +19,8 @@ Teacher.create!(name: "Carlos Vega",email: "carlos@tec.mx",password:123456)
 
 # Students
 User.create!(name: "Eugenio Leal",teacher: Teacher.first,email: "euge@tec.mx",password: 123456)
+User.create!(name: "Salo Charabati",teacher: Teacher.first,email: "salo@tec.mx",password: 123456)
+
 =begin
 Student.create!(name: "Salomón Charabati",teacher: Teacher.first)
 Student.create!(name: "Enrique Vadillo",teacher: Teacher.first)

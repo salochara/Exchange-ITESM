@@ -1,4 +1,9 @@
-<h1>Teachers#index</h1>
-<p>Find me in app/views/teachers/index.html.erb</p>
-<%= raise %>
+<h1>Teachers</h1>
 
+<h4>Welcome, <%= current_user.teacher.name %></h4>
+<br>
+<h5>Import data with csv files</h5>
+<%= form_tag csv_import_path, method: :post, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import CSV" %>
+<% end %>
