@@ -3,10 +3,11 @@ require 'faker'
 
 
 #Student.destroy_all
+Grade.destroy_all
 User.destroy_all
 Teacher.destroy_all
 Course.destroy_all
-Grade.destroy_all
+
 
 
 p "Seeding the DB"
